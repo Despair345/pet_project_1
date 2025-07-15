@@ -1,0 +1,96 @@
+<nav class=" header">
+  <div class="nav_title">
+    {% load static %}
+    <img src="{% static 'icon.png' %}" alt="" width="50px" height="50px">
+    <a class="nav_link nav_title_text" onclick="window.location.reload(true);">osingo</a>
+  </div>     
+  <a class="nav_item" style="text-decoration: none;" href="{% url 'posts:posts' %}">
+    {% if  request.path == '/' %}
+    <svg xmlns="http://www.w3.org/2000/svg" class="nav_icon" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+      <g transform="scale(6,6)"><path d="M39.5,43h-9c-1.381,0 -2.5,-1.119 -2.5,-2.5v-9c0,-1.105 -0.895,-2 -2,-2h-4c-1.105,0 -2,0.895 -2,2v9c0,1.381 -1.119,2.5 -2.5,2.5h-9c-1.381,0 -2.5,-1.119 -2.5,-2.5v-19.087c0,-2.299 1.054,-4.471 2.859,-5.893l14.212,-11.199c0.545,-0.428 1.313,-0.428 1.857,0l14.214,11.199c1.805,1.422 2.858,3.593 2.858,5.891v19.089c0,1.381 -1.119,2.5 -2.5,2.5z"></path></g></g>
+      </svg>
+    {% else %}
+    <svg xmlns="http://www.w3.org/2000/svg" class="nav_icon" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+      <g transform="scale(6,6)"><path d="M23.95117,4c-0.31984,0.01092 -0.62781,0.12384 -0.87891,0.32227l-14.21289,11.19727c-1.8039,1.42163 -2.85937,3.59398 -2.85937,5.89063v19.08984c0,1.36359 1.13641,2.5 2.5,2.5h10c1.36359,0 2.5,-1.13641 2.5,-2.5v-10c0,-0.29504 0.20496,-0.5 0.5,-0.5h5c0.29504,0 0.5,0.20496 0.5,0.5v10c0,1.36359 1.13641,2.5 2.5,2.5h10c1.36359,0 2.5,-1.13641 2.5,-2.5v-19.08984c0,-2.29665 -1.05548,-4.46899 -2.85937,-5.89062l-14.21289,-11.19727c-0.27738,-0.21912 -0.62324,-0.33326 -0.97656,-0.32227zM24,7.41016l13.28516,10.4668c1.0841,0.85437 1.71484,2.15385 1.71484,3.5332v18.58984h-9v-9.5c0,-1.91495 -1.58505,-3.5 -3.5,-3.5h-5c-1.91495,0 -3.5,1.58505 -3.5,3.5v9.5h-9v-18.58984c0,-1.37935 0.63074,-2.67883 1.71484,-3.5332z"></path></g></g>
+      </svg>
+    {% endif %}
+    
+    <span class="nav_link">Головна</span>
+  </a>
+  <a class="nav_item" style="text-decoration: none;" href="{% url 'messenger:messenger' %}">    
+    {% if request.path == '/messenger/' or '/chat/' in request.path %}
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+      <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAYtJREFUOE+tlL0uhUEQhp8XoVCIgiiQSPxFuAQKEaGmU0hU7kBCj7gBlYQLUCMqCW5A/CUiSPwXKBQEw8p+J/ut83EOtt2ZZ2fmfWfFPx99xzOzEqADaPRxZ8CepLesvLxAM6sGJoBRoC5KvgSWgDlJdzH4C9DMuoFloOaHadwAQ5I2w7gU0MPWgYoCR/sE9IXQHNC3eVhAZfFb10C7pHt3EQJn/dwKLC4VNiNpMgf0ap5HAjwCzxn0cqAyuLsA6iXZZ4Vm1vkx4J0gwKlXI+k1H9DMSoFbwLkhOZ2SdhPgALASJR8BDxkVVgHN0d2gpNUE2A+sFQB0Ru8CyvI8lAK2AQdRy7WSXuJEM1sAxvIAUy27l0+AhiAwS5Rwbkl4WhQvzF9sMy1pKvbhPDD+CxNeeWN/Chga+/hj6ZuKBLrV65W0neQlKrcCbu2KOa6yYUlbYVIC7AE2/IUTx1nI7eaI24DoFSfAov++vvg0bLkXOJeUq9SvZIv/YJ33ToF9t2JZrXz7YxfTfxL7DoPUhBUSKvhUAAAAAElFTkSuQmCC" x="0" y="0" width="20" height="20"/>
+    </svg>
+    {% else %}
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+      <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAh5JREFUOE+tlM2rTWEYxX/LV9woGSD3EhLKnRsoAyGFpCgDZeQjMyFFGBhddLtJTAwoJpIUAzL08Q/o+IhEvg24UoTL8j6nd5/22fcc5wy8o1Nn79+71rPWs8V/PvoXz/YYYAkwOz/3CqhJ+tPuvZZA29OAA8A2YEb6/T0DJgHvgQvAgKTPVfAooO3lwBXgE3ASuCEpINieCawH9gFTgU2S7pShTcAMuw2cAfZLGmllzfZ44ERSuwtYKelu8VwDmG0+Bi5J2tNNVraHgC3AYknD8U4ZOABsSHb72ymrXpKV1mJEkg42gDnNN8BhSefyvKYA49ooHZH0NT+3I433KNAnyXWFtvuBB8AsSe9sR7Jxwdg2wN9Ar6QPtnuB19lZrQCuAa5K6ikAtqN7MfxW55ek6GSICcY3YKOkmwVwFXAd6ClKa3tRqs3kCi0K/VDSj9LFLYELgKfAnLi5g+Xdks6WgH1AqI0wG5ZjxZ6lsg5JOpWthLpWlodj+CXgTuBIUygZcAxYLWlpNx3M70yI3QYuSzpU7WHYiOhjtbo6aRnCzeZc7C9V4HNgUNLpTrRc6MFUre3ACkn3m1bP9kLgCbAWmA9EjaYDF4Fr0bNI33YEsA7YmxsQH4d7ZQFFbZalJS8W/AVwC/iYgtqaPlXzgJ9p8FGZicBb4Hyq2PG083Wbo4B5wBFGJBhK6yevZCiemxN/CTwqp9wW2Glu3f7/FzEd1BVCU1ANAAAAAElFTkSuQmCC" x="0" y="0" width="20" height="20"/>
+    </svg>
+    {% endif %}
+    <span class="nav_link" href="#">Чати</span>
+  </a>
+  <a class="nav_item" style="text-decoration: none;" href="{% url 'auth_system:client_list' %}"> 
+    {% if request.path == '/client-list/' %}
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+      <g transform="scale(4,4)"><path d="M31,11c-11.027,0 -20,8.973 -20,20c0,11.027 8.973,20 20,20c3.97417,0 7.67238,-1.17843 10.78906,-3.18555l12.9375,12.9375c1.664,1.664 4.36239,1.664 6.02539,0c1.664,-1.664 1.664,-4.36139 0,-6.02539l-12.9375,-12.9375c2.00712,-3.11668 3.18555,-6.8149 3.18555,-10.78906c0,-11.027 -8.973,-20 -20,-20zM31,19c6.616,0 12,5.384 12,12c0,6.616 -5.384,12 -12,12c-6.616,0 -12,-5.384 -12,-12c0,-6.616 5.384,-12 12,-12z"></path></g></g>
+      </svg>
+    {% else %}
+    <svg class="nav_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+      <g transform="scale(4,4)"><path d="M27,9c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c4.12921,0 7.9263,-1.41263 10.9668,-3.75977l13.08203,13.08203c0.904,0.904 2.36944,0.904 3.27344,0c0.904,-0.904 0.904,-2.36944 0,-3.27344l-13.08203,-13.08203c2.34713,-3.0405 3.75977,-6.83758 3.75977,-10.9668c0,-9.925 -8.075,-18 -18,-18zM27,13c7.719,0 14,6.281 14,14c0,7.719 -6.281,14 -14,14c-7.719,0 -14,-6.281 -14,-14c0,-7.719 6.281,-14 14,-14z"></path></g></g>
+    </svg>
+    {% endif %}
+    
+    <span class="nav_link">Пошук</span>
+  </a>
+  <a class="nav_item" style="text-decoration: none;" href="{% url 'auth_system:messages' %}"> 
+    <div>
+      {% if request.path == '/messages/' %}
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAVlJREFUOE+tlLErRXEUxz9folDIYLAJj4w2sQml8AeoN/oT1CvKYGA1KFbZCQs2ymYyIGVUBspCouP+Xr97uy73vefde7bf75zz+XXO73uOyNmUM49fQDNrAvqAL+BB0mf8Ue/vBRqA+6Q/AppZS5C4CiwCnR7yDGwDa/684v1d/vwC7Lg8Se/urgz0sFNgLKUF5z52PMV/AUw6aAjcAJYy9nNdUkm+J0+xMuvluvK7HXAQuKmXksgrOOAAcJcTsN8BW4FXoDEj1MmrPfyUM2AiI/BE0nQInAf2MwLnJB3GhX0MzNQJPZI0Gwnbi9up/xIo/BN6C4xKcrL5Octm1hNMi5uY4Rqh18CUpMcw/q/l0BEsh12gXEIFOwCKkpxCIktdX2ZWDJS/BbQloG9ACdiUZMkHK+5DMxsC9oARn3gFLEhKnayqC9bMmmPra1nSR6U+VAXW+DlR2DcWGWZeEX6lLAAAAABJRU5ErkJggg==" x="0" y="0" width="20" height="20"/>
+      </svg>
+      {% else %}
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAcJJREFUOE+tlD9IllEUxn+PlhRIQ1tLCCZh5FStQQRhKEGiIdIQGGhRg6MglNBQQxAORZRYLhYKEpESNNgquEVDRTi2NQQRUT3dI/fVr6/Pz88/d7nw3nN+7/nznCN2+GiHefwHtL0baAZ+AcuS4l49tncBTUDcn8rfV4G29yavm8AZ4H12aAFeALczcRg4B3wEfgOtwOvwk/QjbFaAGfYqGTwHHkn6k7/XA1eB9gycBx5IClj41QEDQDfQEdACeAf4LOlhpZraDiiS7q/zfgU4KGlYuWaLwLEiss02Kke6BJwI4OEU/Q1JfZsFlTVraoVj+0jKZlRSzzaBM0kZIwFsBBYkHd8mMFI+WTQlWn89pf1hK9BctnuSzhbATuC8pP4tAieAaUlzpcKeTRPwRFIIueZjuwvokxRaXBs92/uBN8CQpLe1EG2fAu4CpyV9/QeYlX8g6fElMCZpshrU9iXgGtAp6UthW2k57AOeAt+AQUnfy/S2B4jJOpSWw8UisnWBJTM6lJbEBaA/1edd/t4GjAMh4uiqy7Ooug9tHwUeA8+yYy9wufhBpZJsuGBtN6RVdis7j0j6Wa22GwJr6XapzV9O5KVmKNXRNAAAAABJRU5ErkJggg==" x="0" y="0" width="20" height="20"/>
+      </svg>
+      {% endif %}
+    {% if user.has_unread_messages %}
+      <div class="unread_message_marker"></div>
+    {% endif %}
+    </div>
+    <span class="nav_link">Повідомлення</span>
+  </a>
+  <a class="nav_item" style="text-decoration: none;" href="{% url 'posts:create_post' %}"> 
+    {% if request.path == '/create/' %}
+    <svg class="nav_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <g transform="scale(9,9)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21,16h-5v5c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-5h-5c-0.552,0 -1,-0.447 -1,-1c0,-0.553 0.448,-1 1,-1h5v-5c0,-0.553 0.448,-1 1,-1c0.552,0 1,0.447 1,1v5h5c0.552,0 1,0.447 1,1c0,0.553 -0.448,1 -1,1z"></path></g></g>
+      </svg>
+    {% else %}
+      <svg class="nav_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0,0,256,256">
+      <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+      <g transform="scale(9,9)"><path d="M16,3c-7.16797,0 -13,5.83203 -13,13c0,7.16797 5.83203,13 13,13c7.16797,0 13,-5.83203 13,-13c0,-7.16797 -5.83203,-13 -13,-13zM16,5c6.08594,0 11,4.91406 11,11c0,6.08594 -4.91406,11 -11,11c-6.08594,0 -11,-4.91406 -11,-11c0,-6.08594 4.91406,-11 11,-11zM15,10v5h-5v2h5v5h2v-5h5v-2h-5v-5z"></path></g></g>
+      </svg>
+    {% endif %}
+    <span class="nav_link">Створити</span>
+  </a> 
+  <a class="nav_item" style="text-decoration: none;" 
+  {% if user.is_authenticated %} 
+  href="{% url 'auth_system:account' user.id %}"
+  {% else %}
+  href="{% url 'auth_system:login' %}"
+  {% endif %}>
+    {% if '/account/' in request.path %}
+    <img class="nav_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvUlEQVR4nO3TPWpCQRSA0YelCroCbXQHppFsI6WxFHehjYJYxHQRspqkDWlioYWCC7C0PfJAi0D0/cwrUvjBFJfLnGJgoujevUJDCQ94Qieei4Lb+Pa7L7RC4Sp2/m6LSgg+dLtBCL5MwN9C8HkCPgvBHxPwbm48Dq9X4JeoiPCMT+zxgV7070MNfUzxjsl5roWgFSxwvPLmx/O+nBVuYiNdazTSwnWsZOsnvpcGH2WEL43T4DMccpz8vzVPJ6XlI/r7P4mMAAAAAElFTkSuQmCC" alt="person-male--v3">
+    {% else %}
+    <img class="nav_icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOUlEQVR4nO2UTyuEURTGX1GjxLDyZzNbyZ6dPYmywDeg+B4IC8JaVixFFmND4QsQxYKNpYWNcp+fR3eaUlPTzLzv2M2zOZ17zv2d0z2nmyQttfQvst3XbGAnsIn08QOOFtiwncsKbgMukG5sj9nusj2OdAucx3h6eAgzSK+2uyuK9iC9OYTp1HBgF9iqEtsGdrLA94G1KrF1YC813NIi0mPl8EpDlp4szaeH2x1Id8Cp7UL5rACclYfcnhoeZbsXOEL6RvosWTi0nU+aJdt528NxU5oGjbI9ZHvC0kLJ2oNJVjmEKeAS6QvpHigiPZR8KDqEycahdg44QHq3tFL5FNG3tBrjcR0b+gqAE6Qr2/01mhhAugaO6+taWkZ6rncbYh7Si6Wl2skhzNkerauTvwIjDmG2kTuZ9QvvskUDfgTi7gAAAABJRU5ErkJggg==" alt="person-male--v2">      
+    {% endif %}
+    
+    <span class="nav_link">Профіль</span>
+  </a> 
+  </nav>
+
+  

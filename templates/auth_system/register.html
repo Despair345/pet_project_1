@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Реєстрація
+{% endblock %}
+
+{% block content %}
+    <div class="card form">
+        <h3>Заповніть форму для продовження</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label" for="id_email">Пошта:</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="id_username">Юзернейм не може містити пробіли:</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="id_password1">Пароль:</label>
+                {{ form.password1 }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="id_password2">Повторіть пароль:</label>
+                {{ form.password2 }}
+            </div>
+            <button type="submit" class="btn-my">Реєстрація</button>
+            <a href="{% url 'auth_system:login' %}" class="a-my-primary">Увійти</a>
+        </form>
+        {% if form.errors %}
+            <ul class="error-list">
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}
