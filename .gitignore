@@ -3,19 +3,22 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 *.log
+.env
 
 # Django
 db.sqlite3
-.env
-*.pyc
+/static/
+/media/
 
-# VSCode, PyCharm
+# Virtual environment
+venv/
+ENV/
+env/
+
+# IDE
 .vscode/
 .idea/
 
 # OS
 .DS_Store
 Thumbs.db
-
-
-
