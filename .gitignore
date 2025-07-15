@@ -16,3 +16,9 @@ db.sqlite3
 # OS
 .DS_Store
 Thumbs.db
+
+git remote set-url origin https://ghttps://github.com/Despair345/pet_project_1
+git branch -M main
+git push -u origin main
+
+
